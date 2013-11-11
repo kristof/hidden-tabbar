@@ -98,9 +98,9 @@ nav.main {
 /* line 22, ../sass/style.scss */
 nav.main ul {
   position: absolute;
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   *zoom: 1;
   background: #111;

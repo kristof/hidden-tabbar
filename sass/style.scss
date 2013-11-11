@@ -21,9 +21,9 @@ nav.main{
 	
 	ul{
 		position: absolute;
-		bottom: 2px;
-		left: 2px;
-		right: 2px;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		@include clearfix;
 		background:#111;
 		
