@@ -103,12 +103,13 @@ nav.main ul {
   right: 0;
   overflow: hidden;
   *zoom: 1;
+  background: #111;
 }
-/* line 29, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 nav.main ul li {
   padding: 20px;
   color: #fff;
-  border-top: 1px solid #3f3f3f;
+  border-left: 2px solid #222;
   width: 33%;
   float: left;
   text-align: center;
@@ -116,18 +117,22 @@ nav.main ul li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 nav.main ul li a {
   text-decoration: none;
   color: #fff;
 }
-/* line 43, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 nav.main ul li:nth-child(2) {
   width: 34%;
   color: red;
 }
+/* line 49, ../sass/style.scss */
+nav.main ul li:first-child {
+  border-left: none;
+}
 
-/* line 51, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .page {
   position: absolute;
   left: 0;
@@ -147,8 +152,13 @@ nav.main ul li:nth-child(2) {
   -moz-transform-origin: top center;
   -o-transform-origin: top center;
   transform-origin: top center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 63, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .page .content {
   position: absolute;
   left: 0;
@@ -161,19 +171,19 @@ nav.main ul li:nth-child(2) {
   font-size: 16px;
   color: #222;
 }
-/* line 75, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .page .content h1 {
   font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
   font-size: 48px;
   margin-bottom: 20px;
   line-height: 1.2em;
 }
-/* line 82, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .page .content p {
   line-height: 1.5em;
   margin-top: 20px;
 }
-/* line 86, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .page .content p.introduction {
   margin-top: 0;
   font-size: 22px;
@@ -181,7 +191,7 @@ nav.main ul li:nth-child(2) {
   font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 96, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .page .showNavigation {
   text-decoration: none;
   color: #fff;
@@ -206,14 +216,14 @@ nav.main ul li:nth-child(2) {
   -o-transition: -o-transform 0.3s;
   transition: transform 0.3s;
 }
-/* line 114, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 117, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .page.navShown .showNavigation {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);

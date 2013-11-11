@@ -25,11 +25,12 @@ nav.main{
 		left: 0;
 		right: 0;
 		@include clearfix;
+		background:#111;
 		
 		li{
 			padding: 20px;
 			color: #fff;
-			border-top: 1px solid #3f3f3f;
+			border-left: 2px solid #222;
 			width: 33%;
 			float: left;
 			text-align: center;
@@ -43,6 +44,10 @@ nav.main{
 			&:nth-child(2){
 				width: 34%;
 				color: red;
+			}
+			
+			&:first-child{
+				border-left: none;
 			}
 		}
 	}
@@ -59,6 +64,7 @@ nav.main{
 	@include box-shadow(0 0 20px rgba(0,0,0,0.5));
 	@include transition(transform 0.3s);
 	@include transform-origin(top, center);
+	@include border-radius(5px);
 	
 	.content{
 		position: absolute;
