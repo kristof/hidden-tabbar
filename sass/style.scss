@@ -1,0 +1,121 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform-legacy";
+@import "compass/utilities/general/clearfix";
+@import "compass/typography/text/replacement";
+
+.first{ margin-left: 0 !important; }
+.last{ margin-right: 0 !important; }
+.top{ margin-top: 0 !important; }
+.bottom{ margin-bottom: 0 !important; }
+
+body{
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #fff;
+	background: #222;
+}
+
+nav.main{
+	font-size: 16px;
+	
+	ul{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include clearfix;
+		
+		li{
+			padding: 20px;
+			color: #fff;
+			border-top: 1px solid #3f3f3f;
+			width: 33%;
+			float: left;
+			text-align: center;
+			@include box-sizing(border-box);
+			
+			a{
+				text-decoration: none;
+				color: #fff;
+			}
+			
+			&:nth-child(2){
+				width: 34%;
+				color: red;
+			}
+		}
+	}
+}
+
+.page{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: #F0CA32;
+	@include box-shadow(0 0 20px rgba(0,0,0,0.5));
+	@include transition(transform 0.3s);
+	@include transform-origin(top, center);
+	
+	.content{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 30px 30px 80px;
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		font-size: 16px;
+		color: #222;
+		
+		h1{
+			font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+			font-size: 48px;
+			margin-bottom: 20px;
+			line-height: 1.2em;
+		}
+		
+		p{
+			line-height: 1.5em;
+			margin-top: 20px;
+			
+			&.introduction{
+				margin-top: 0;
+				font-size: 22px;
+				line-height: 1.2em;
+				font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+				color: rgba(0,0,0,0.5);
+			}
+		}
+	}
+	
+	.showNavigation{
+		text-decoration: none;
+		color: #fff;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		font-size: 40px;
+		z-index: 99;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: rgba(0,0,0,0.5);
+		text-align: center;
+		line-height: 0.75;
+		@include border-radius(50%);
+		@include transition(transform 0.3s);
+	}
+	
+	&.navShown{
+		@include transform(0.775, 0deg, 0, 45px, 0deg, 0deg);
+		
+		.showNavigation{
+			@include rotate(45deg);
+		}
+	}
+}

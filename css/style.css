@@ -1,0 +1,222 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/style.scss */
+.first {
+  margin-left: 0 !important;
+}
+
+/* line 8, ../sass/style.scss */
+.last {
+  margin-right: 0 !important;
+}
+
+/* line 9, ../sass/style.scss */
+.top {
+  margin-top: 0 !important;
+}
+
+/* line 10, ../sass/style.scss */
+.bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 12, ../sass/style.scss */
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #fff;
+  background: #222;
+}
+
+/* line 19, ../sass/style.scss */
+nav.main {
+  font-size: 16px;
+}
+/* line 22, ../sass/style.scss */
+nav.main ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 29, ../sass/style.scss */
+nav.main ul li {
+  padding: 20px;
+  color: #fff;
+  border-top: 1px solid #3f3f3f;
+  width: 33%;
+  float: left;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 38, ../sass/style.scss */
+nav.main ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 43, ../sass/style.scss */
+nav.main ul li:nth-child(2) {
+  width: 34%;
+  color: red;
+}
+
+/* line 51, ../sass/style.scss */
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #F0CA32;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
+}
+/* line 63, ../sass/style.scss */
+.page .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 30px 30px 80px;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  font-size: 16px;
+  color: #222;
+}
+/* line 75, ../sass/style.scss */
+.page .content h1 {
+  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+/* line 82, ../sass/style.scss */
+.page .content p {
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+/* line 86, ../sass/style.scss */
+.page .content p.introduction {
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 96, ../sass/style.scss */
+.page .showNavigation {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 40px;
+  z-index: 99;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 0.75;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+}
+/* line 114, ../sass/style.scss */
+.page.navShown {
+  -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
+  -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
+  -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
+  transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
+}
+/* line 117, ../sass/style.scss */
+.page.navShown .showNavigation {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

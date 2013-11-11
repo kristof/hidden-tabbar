@@ -1,0 +1,61 @@
+<html class="modernbrowser" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="initial-scale=1.0">
+	<meta name="viewport"
+		  content="width=320.1">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<title>Navigation experiments</title>
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<nav class="main">
+		<ul>
+			<li><a href="">Moments</a></li>
+			<li><a href="">Profile</a></li>
+			<li><a href="">Settings</a></li>
+		</ul>
+	</nav>
+	
+	<div class="page">
+		<a href="" class="showNavigation">+</a>
+		
+		<div class="content">
+			<h1>Awesome design article</h1>
+			
+			<p class="introduction">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec eros mauris. Vivamus hendrerit eget neque ac commodo. Etiam semper arcu non risus mattis aliquet.</p>
+
+			<p>Praesent felis sapien, sollicitudin et sollicitudin sed, rutrum non neque. Pellentesque vel erat vel urna condimentum convallis. Aliquam erat volutpat. Quisque consectetur sodales ante, et fermentum diam tempus dapibus. Duis justo nisl, convallis sit amet laoreet vel, congue vitae nulla. Mauris consequat ante in libero mollis pharetra vitae hendrerit diam. Fusce dictum, leo sed placerat scelerisque, leo ipsum sodales libero, quis adipiscing sem neque vel lectus. Morbi sed sapien eget arcu fermentum mattis sed id ligula.</p>
+
+			<p>Mauris varius bibendum lorem. Donec quis tincidunt massa, at facilisis mi. Pellentesque vestibulum pulvinar erat, sit amet adipiscing ligula accumsan id. Etiam arcu leo, gravida non pretium a, gravida lacinia tellus. Nam sed laoreet risus. Quisque id aliquet neque. Etiam semper dolor a lectus venenatis pretium. Nullam venenatis dui sit amet nulla scelerisque facilisis. Sed felis augue, faucibus at fermentum vitae, condimentum sit amet sapien. In a nisi commodo, feugiat arcu non, gravida felis.</p>
+
+			<p>Aenean laoreet pulvinar faucibus. Curabitur augue eros, pellentesque ac eleifend at, porta vitae nulla. Duis accumsan justo dolor, nec interdum elit mattis semper. Vestibulum hendrerit ligula dui, eu dignissim lacus lobortis auctor. Sed interdum neque nulla, pretium commodo dui adipiscing non. Integer eu erat rutrum nibh egestas placerat. Proin at eleifend erat. Aliquam erat volutpat. Etiam vulputate pulvinar elit, vel volutpat velit dapibus et. Suspendisse blandit felis elit, ut mollis neque congue adipiscing. Praesent lacus magna, semper vitae diam et, egestas luctus nulla. Mauris interdum dolor egestas velit posuere tempor. Curabitur lorem ante, volutpat vitae mauris at, vulputate ullamcorper tellus. Nulla vel sodales leo, in commodo nisi. Donec pellentesque nulla lorem, eget aliquam arcu ornare iaculis. Nam sagittis ullamcorper lacus et vehicula.</p>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<script>
+		
+		$(function(){
+			$('.showNavigation').on('click', function(){
+				$('.page').toggleClass('navShown');
+				return false;
+			});
+			
+			$('.page').on('click', function(){
+				$('.page').removeClass('navShown');
+				return false;
+			});
+		});
+		
+	</script>
+			 
+</body>
+</html>
