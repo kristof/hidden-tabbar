@@ -57,6 +57,8 @@
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/svgicons-config.js"></script>
+	<script src="js/svgicons.js"></script>
 	
 	<script>
 		
@@ -110,17 +112,11 @@
 				return false;
 			});
 			
+			// initialize all icons
+			new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+			
 		});
 		
-	</script>
-	
-	<script src="js/svgicons-config.js"></script>
-	<script src="js/svgicons.js"></script>
-	<script>
-		(function() {
-			// initialize all
-			new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
-		})();
 	</script>
 			 
 </body>
