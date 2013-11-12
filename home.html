@@ -85,11 +85,8 @@
 					$('.tabs').removeClass('active');
 					$('.tabs.' + self.data('tab')).addClass('active');
 					$('.page').removeClass('slideOut');
-				}, 300);
-				
-				timeout = setTimeout(function(){
 					$('.page').removeClass('navShown');
-				}, 630);
+				}, 300);
 				
 				return false;
 			});
