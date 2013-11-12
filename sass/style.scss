@@ -116,13 +116,15 @@ nav.main{
 	}
 	
 	p{
-		line-height: 1.8em;
+		line-height: 1.6em;
 		margin-top: 20px;
+		font-weight: normal;
 		
 		&.introduction{
 			margin-top: 0;
 			font-weight: bold;
-			font: 24px/24px -apple-system-font;
+			font: 21px/21px -apple-system-font;
+			line-height: 1.6em;
 		}
 	}
 }

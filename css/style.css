@@ -199,17 +199,19 @@ nav.main ul li:first-child {
 }
 /* line 118, ../sass/style.scss */
 .content p {
-  line-height: 1.8em;
+  line-height: 1.6em;
   margin-top: 20px;
+  font-weight: normal;
 }
-/* line 122, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-weight: bold;
-  font: 24px/24px -apple-system-font;
+  font: 21px/21px -apple-system-font;
+  line-height: 1.6em;
 }
 
-/* line 131, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -222,7 +224,7 @@ nav.main ul li:first-child {
   padding: 30px 30px 90px;
   font-weight: bold;
 }
-/* line 143, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
