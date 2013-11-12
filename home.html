@@ -82,14 +82,25 @@
 				self.addClass('active');
 				
 				timeout = setTimeout(function(){
+					$('.page').addClass('slideIn');
+					$('.page').removeClass('slideOut');
 					$('.tabs').removeClass('active');
 					$('.tabs.' + self.data('tab')).addClass('active');
-					$('.page').removeClass('slideOut');
+					$('.page').hide();
 				}, 300);
 				
 				timeout = setTimeout(function(){
-					$('.page').removeClass('navShown');
+					$('.page').show();
+				}, 310);
+				
+				timeout = setTimeout(function(){
+					$('.page').removeClass('slideIn');
 				}, 630);
+				
+				timeout = setTimeout(function(){
+					$('.page').show();
+					$('.page').removeClass('navShown');
+				}, 930);
 				
 				return false;
 			});
