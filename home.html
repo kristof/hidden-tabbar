@@ -128,13 +128,23 @@
 				return false;
 			});				
 			
+			
+			// Init the menu icon
 			var icon = new svgIcon(
 				document.querySelector('.showNavigation'), 
 				svgIconConfig, 
 				{ 	speed: 300, 
 					size : { w : 32, h : 32 }
 				} );
+				
+			// Add tap highlights
+			$('a').on('touchstart', function(e){
+				$(this).addClass('tapped');
+			});
 			
+			$('a').on('touchend', function(e){
+				$(this).removeClass('tapped');
+			});
 		});
 		
 	</script>

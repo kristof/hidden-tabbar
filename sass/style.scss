@@ -9,6 +9,7 @@ body{
 	color: #fff;
 	background: #222 url(../img/ajax-loader.gif) no-repeat center center;
 	background-size: 33px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 // Main navigation
@@ -43,6 +44,12 @@ nav.main{
 				
 				&.active{
 					background: #F0CA32;
+					color: #222;
+				}
+				
+				&.tapped,
+				&:active{
+					background: #5C8F3F;
 					color: #222;
 				}
 			}
