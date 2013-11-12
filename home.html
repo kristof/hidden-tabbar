@@ -75,67 +75,70 @@
 		
 		$(function(){
 			
-			var timeout;
-			
-			
-			// Toggle the tabbar navigation
-			$('.showNavigation').on('click', function(){
-				$('.page').toggleClass('navShown');
-				return false;
-			});
-			
-			// On page click go back to page
-			$('body').on('click', '.page.navShown', function(){
-				$('.page').removeClass('navShown');
-				icon.toggle(true);
-				return false;
-			});
-			
-			// Navigate to other pages
-			$('nav.main a').on('click', function(){
-				var self = $(this);
-				
-				// Check if we navigate to another page or a new one
-				if($('.tabs.active').hasClass(self.data('tab'))){	
-					
-					// Head back to the current page
-					$('.page').removeClass('navShown');
-					icon.toggle(true);
-					
-				}else{
-					
-					//Navigate to another page
-					$('.page').addClass('slideOut');
-					$('nav.main a').removeClass('active');
-					self.addClass('active');
-					
-					timeout = setTimeout(function(){
-						$('.tabs').removeClass('active');
-						$('.tabs.' + self.data('tab')).addClass('active');
-						icon.toggle(true);
-					}, 300);
-					
-					timeout = setTimeout(function(){
-						$('.page').removeClass('slideOut');
-					}, 610);
-					
-					timeout = setTimeout(function(){
-						$('.page').removeClass('navShown');
-					}, 1000);
-				
-				}
-				
-				return false;
-			});				
-			
+			var timeout;		
 			
 			// Init the menu icon
 			var icon = new svgIcon(
 				document.querySelector('.showNavigation'), 
 				svgIconConfig, 
-				{ 	speed: 300, 
-					size : { w : 32, h : 32 }
-				} );
+				{ 	speed	: 300, 
+					size		: { w : 32, h : 32 }, 
+					onLoad	: function(){
+						
+						// Toggle the tabbar navigation
+						$('.showNavigation').on('click', function(){
+							$('.page').toggleClass('navShown');
+							return false;
+						});
+						
+						// On page click go back to page
+						$('body').on('click', '.page.navShown', function(){
+							$('.page').removeClass('navShown');
+							icon.toggle(true);
+							return false;
+						});
+						
+						// Navigate to other pages
+						$('nav.main a').on('click', function(){
+							
+							var self = $(this);
+							
+							// Check if we navigate to another page or a new one
+							if($('.tabs.active').hasClass(self.data('tab'))){	
+								
+								// Head back to the current page
+								$('.page').removeClass('navShown');
+								icon.toggle(true);
+								
+							}else{
+								
+								//Navigate to another page
+								$('.page').addClass('slideOut');
+								$('nav.main a').removeClass('active');
+								self.addClass('active');
+								
+								timeout = setTimeout(function(){
+									$('.tabs').removeClass('active');
+									$('.tabs.' + self.data('tab')).addClass('active');
+									icon.toggle(true);
+								}, 300);
+								
+								timeout = setTimeout(function(){
+									$('.page').removeClass('slideOut');
+								}, 610);
+								
+								timeout = setTimeout(function(){
+									$('.page').removeClass('navShown');
+								}, 1000);
+							
+							}
+							
+							return false;
+						});
+						
+					}
+				}
+			);
 				
 			// Add tap highlights
 			$('a').on('touchstart', function(e){
