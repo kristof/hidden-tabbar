@@ -150,8 +150,8 @@ nav.main ul li:first-child {
 /* line 75, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
   z-index: 99;
   display: block;
   cursor: pointer;
