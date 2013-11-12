@@ -85,9 +85,9 @@
 			});
 			
 			// On page click go back to page
-			$('.page').on('click', function(){
+			$('body').on('click', '.page.navShown', function(){
 				$('.page').removeClass('navShown');
-				initIcon();
+				icon.toggle(true);
 				return false;
 			});
 			
@@ -100,7 +100,7 @@
 					
 					// Head back to the current page
 					$('.page').removeClass('navShown');
-					initIcon();
+					icon.toggle(true);
 					
 				}else{
 					
@@ -112,7 +112,7 @@
 					timeout = setTimeout(function(){
 						$('.tabs').removeClass('active');
 						$('.tabs.' + self.data('tab')).addClass('active');
-						initIcon();
+						icon.toggle(true);
 					}, 300);
 					
 					timeout = setTimeout(function(){
@@ -126,20 +126,14 @@
 				}
 				
 				return false;
-			});
+			});				
 			
-			function initIcon(){
-				$('.showNavigation').html('');
-				
-				new svgIcon(
-					document.querySelector( '.showNavigation' ), 
-					svgIconConfig, 
-					{ 	speed: 300, 
-						size : { w : 32, h : 32 }
-					} );
-			}
-			
-			initIcon();
+			var icon = new svgIcon(
+				document.querySelector('.showNavigation'), 
+				svgIconConfig, 
+				{ 	speed: 300, 
+					size : { w : 32, h : 32 }
+				} );
 			
 		});
 		
