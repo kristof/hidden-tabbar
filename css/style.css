@@ -197,12 +197,12 @@ nav.main ul li:first-child {
 }
 /* line 104, ../sass/style.scss */
 .page.navShown {
-  -webkit-transform: rotateX(10deg) scale(0.775);
-  -moz-transform: rotateX(10deg) scale(0.775);
-  -ms-transform: rotateX(10deg) scale(0.775);
-  -o-transform: rotateX(10deg) scale(0.775);
-  transform: rotateX(10deg) scale(0.775);
-  -webkit-transform-origin: 50% 45px;
+  -webkit-transform: rotateX(20deg) scale(0.775) translateY(45px);
+  -moz-transform: rotateX(20deg) scale(0.775) translateY(45px);
+  -ms-transform: rotateX(20deg) scale(0.775) translateY(45px);
+  -o-transform: rotateX(20deg) scale(0.775) translateY(45px);
+  transform: rotateX(20deg) scale(0.775) translateY(45px);
+  -webkit-transform-origin: 50% 0;
   -webkit-transform-style: preserve-3d;
 }
 /* line 109, ../sass/style.scss */
