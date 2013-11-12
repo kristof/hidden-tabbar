@@ -238,12 +238,19 @@ nav.main ul li:first-child {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/* line 136, ../sass/style.scss */
+.page.navShown.slideOut {
+  -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
+  -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
+  -o-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
+  transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
+}
 
-/* line 138, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .tabs {
   display: none;
 }
-/* line 141, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .tabs.active {
   display: block;
 }

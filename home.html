@@ -60,6 +60,9 @@
 	<script>
 		
 		$(function(){
+			var timeout;
+			
+			
 			$('.showNavigation').on('click', function(){
 				$('.page').toggleClass('navShown');
 				return false;
@@ -71,10 +74,23 @@
 			});
 			
 			$('nav.main a').on('click', function(){
+				var self = $(this);
+				
+				
+				$('.page').addClass('slideOut');
 				$('nav.main a').removeClass('active');
-				$(this).addClass('active');
-				$('.tabs').removeClass('active');
-				$('.tabs.' + $(this).data('tab')).addClass('active');
+				self.addClass('active');
+				
+				timeout = setTimeout(function(){
+					$('.tabs').removeClass('active');
+					$('.tabs.' + self.data('tab')).addClass('active');
+					$('.page').removeClass('slideOut');
+				}, 300);
+				
+				timeout = setTimeout(function(){
+					$('.page').removeClass('navShown');
+				}, 600);
+				
 				return false;
 			});
 		});

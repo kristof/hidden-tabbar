@@ -132,6 +132,10 @@ nav.main{
 		.showNavigation{
 			@include rotate(45deg);
 		}
+		
+		&.slideOut{
+			@include transform(0.775, 0deg, 0, -150%, 0deg, 0deg);
+		}
 	}
 }
 
