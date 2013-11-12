@@ -112,20 +112,19 @@ nav.main{
 		//font-size: 48px;
 		margin-bottom: 20px;
 		line-height: 1.2em;
-		font: 72px/72px -apple-system-font;
+		font: 48px/48px -apple-system-font;
 		font-weight: 100;
 	}
 	
 	p{
 		line-height: 1.5em;
 		margin-top: 20px;
+		font: 17px/21px -apple-system-font;
 		
 		&.introduction{
 			margin-top: 0;
-			font-size: 22px;
-			line-height: 1.2em;
-			font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-			color: rgba(0,0,0,0.5);
+			font: 17px/21px -apple-system-font;
+			font-weight: bold;
 		}
 	}
 }
