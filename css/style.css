@@ -193,17 +193,17 @@ nav.main ul li:first-child {
 }
 /* line 110, ../sass/style.scss */
 .content h1 {
-  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-  font-size: 48px;
   margin-bottom: 20px;
   line-height: 1.2em;
+  font: 72px/72px -apple-system-font;
+  font-weight: 100;
 }
-/* line 117, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .content p {
   line-height: 1.5em;
   margin-top: 20px;
 }
-/* line 121, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-size: 22px;
@@ -212,7 +212,7 @@ nav.main ul li:first-child {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 132, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -224,7 +224,7 @@ nav.main ul li:first-child {
   overflow: auto;
   padding: 30px 30px 90px;
 }
-/* line 143, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .tabs.active {
   display: block;
 }

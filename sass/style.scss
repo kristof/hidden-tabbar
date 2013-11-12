@@ -108,10 +108,12 @@ nav.main{
 	color: #222;
 	
 	h1{
-		font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-		font-size: 48px;
+		//font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+		//font-size: 48px;
 		margin-bottom: 20px;
 		line-height: 1.2em;
+		font: 72px/72px -apple-system-font;
+		font-weight: 100;
 	}
 	
 	p{
