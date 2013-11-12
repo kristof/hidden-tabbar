@@ -86,7 +86,7 @@ nav.main{
 	@include transform-origin(top, center);
 	@include border-radius(5px);
 	-webkit-backface-visibility: hidden;
-	@include transform(perspective(200px));
+	@include transform(perspective(600px));
 	
 	.showNavigation{
 		position: absolute;

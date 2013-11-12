@@ -172,11 +172,11 @@ nav.main ul li:first-child {
   -o-border-radius: 5px;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: perspective(200px);
-  -moz-transform: perspective(200px);
-  -ms-transform: perspective(200px);
-  -o-transform: perspective(200px);
-  transform: perspective(200px);
+  -webkit-transform: perspective(600px);
+  -moz-transform: perspective(600px);
+  -ms-transform: perspective(600px);
+  -o-transform: perspective(600px);
+  transform: perspective(600px);
 }
 /* line 91, ../sass/style.scss */
 .page .showNavigation {
