@@ -76,24 +76,30 @@
 			$('nav.main a').on('click', function(){
 				var self = $(this);
 				
-				
-				$('.page').addClass('slideOut');
-				$('nav.main a').removeClass('active');
-				self.addClass('active');
-				
-				timeout = setTimeout(function(){
-					$('.tabs').removeClass('active');
-					$('.tabs.' + self.data('tab')).addClass('active');
-				}, 300);
-				
-				timeout = setTimeout(function(){
-					$('.page').removeClass('slideOut');
-				}, 610);
-				
-				timeout = setTimeout(function(){
+				if($('.tabs.active').hasClass(self.data('tab'))){
+					
 					$('.page').removeClass('navShown');
-				}, 1000);
+					
+				}else{
+					
+					$('.page').addClass('slideOut');
+					$('nav.main a').removeClass('active');
+					self.addClass('active');
+					
+					timeout = setTimeout(function(){
+						$('.tabs').removeClass('active');
+						$('.tabs.' + self.data('tab')).addClass('active');
+					}, 300);
+					
+					timeout = setTimeout(function(){
+						$('.page').removeClass('slideOut');
+					}, 610);
+					
+					timeout = setTimeout(function(){
+						$('.page').removeClass('navShown');
+					}, 1000);
 				
+				}
 				return false;
 			});
 		});

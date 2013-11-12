@@ -88,14 +88,15 @@ body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #fff;
-  background: #222;
+  background: #222222 url(../img/ajax-loader.gif) no-repeat center center;
+  background-size: 33px;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 nav.main {
   font-size: 16px;
 }
-/* line 22, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 nav.main ul {
   position: absolute;
   bottom: 0;
@@ -105,7 +106,7 @@ nav.main ul {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 30, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 nav.main ul li {
   width: 33%;
   float: left;
@@ -115,32 +116,32 @@ nav.main ul li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 37, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 nav.main ul li a {
   display: block;
   padding: 20px;
   color: #fff;
   text-decoration: none;
 }
-/* line 44, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   background: #000;
 }
-/* line 48, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 nav.main ul li a.active {
   background: #F0CA32;
   color: #222;
 }
-/* line 54, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 nav.main ul li:nth-child(2) {
   width: 34%;
 }
-/* line 58, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 nav.main ul li:first-child {
   border-left: none;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .page {
   position: absolute;
   left: 0;
@@ -166,7 +167,7 @@ nav.main ul li:first-child {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 78, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .page .content {
   position: absolute;
   left: 0;
@@ -179,19 +180,19 @@ nav.main ul li:first-child {
   font-size: 16px;
   color: #222;
 }
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .page .content h1 {
   font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
   font-size: 48px;
   margin-bottom: 20px;
   line-height: 1.2em;
 }
-/* line 97, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .page .content p {
   line-height: 1.5em;
   margin-top: 20px;
 }
-/* line 101, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .page .content p.introduction {
   margin-top: 0;
   font-size: 22px;
@@ -199,7 +200,7 @@ nav.main ul li:first-child {
   font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 111, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .page .showNavigation {
   text-decoration: none;
   color: #fff;
@@ -224,28 +225,28 @@ nav.main ul li:first-child {
   -o-transition: -o-transform 0.3s;
   transition: transform 0.3s;
 }
-/* line 129, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .page.navShown .showNavigation {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 136, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
 }
-/* line 140, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .page.navShown.slideIn {
   -webkit-transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
@@ -253,11 +254,11 @@ nav.main ul li:first-child {
   transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
 }
 
-/* line 146, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .tabs {
   display: none;
 }
-/* line 149, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
