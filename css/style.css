@@ -64,30 +64,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 6, ../sass/style.scss */
-html {
-  background: #000;
-}
-
-/* line 10, ../sass/style.scss */
 body {
   font: 17px/21px -apple-system-font;
   color: #fff;
   background: #222222 url(../img/ajax-loader.gif) no-repeat center center;
   background-size: 33px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 nav.main {
   font-size: 16px;
 }
-/* line 24, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 nav.main ul {
   position: absolute;
   bottom: 0;
@@ -96,8 +85,15 @@ nav.main ul {
   background: #111;
   overflow: hidden;
   *zoom: 1;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
 }
-/* line 32, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 nav.main ul li {
   width: 33%;
   float: left;
@@ -107,37 +103,37 @@ nav.main ul li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 39, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 nav.main ul li a {
   display: block;
   padding: 20px;
   color: #fff;
   text-decoration: none;
 }
-/* line 46, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   background: #000;
 }
-/* line 50, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 nav.main ul li a.active {
   background: #F0CA32;
   color: #222;
 }
-/* line 56, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 nav.main ul li a.tapped, nav.main ul li a:active {
   background: #fff;
   color: #222;
 }
-/* line 62, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 nav.main ul li:nth-child(2) {
   width: 34%;
 }
-/* line 66, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 nav.main ul li:first-child {
   border-left: none;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .page {
   position: absolute;
   left: 0;
@@ -164,7 +160,7 @@ nav.main ul li:first-child {
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
 }
-/* line 88, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
   bottom: 20px;
@@ -181,14 +177,14 @@ nav.main ul li:first-child {
   border-radius: 50%;
   -webkit-backface-visibility: hidden;
 }
-/* line 101, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 104, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
@@ -196,25 +192,25 @@ nav.main ul li:first-child {
   transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
 }
 
-/* line 111, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .content {
   font-size: 16px;
   color: #222;
 }
-/* line 115, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .content h1 {
   margin-bottom: 20px;
   line-height: 1.2em;
   font: 48px/48px -apple-system-font;
   font-weight: 100;
 }
-/* line 124, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content p {
   line-height: 1.6em;
   margin-top: 20px;
   font-weight: normal;
 }
-/* line 129, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-weight: bold;
@@ -222,7 +218,7 @@ nav.main ul li:first-child {
   line-height: 1.6em;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -235,7 +231,7 @@ nav.main ul li:first-child {
   padding: 30px 30px 90px;
   font-weight: bold;
 }
-/* line 151, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .tabs.active {
   display: block;
 }

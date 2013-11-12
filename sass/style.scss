@@ -3,18 +3,12 @@
 @import "compass/css3/transform-legacy";
 @import "compass/utilities/general/clearfix";
 
-html{
-	background: #000;
-}
-
 body{
 	font: 17px/21px -apple-system-font;
 	color: #fff;
 	background: #222 url(../img/ajax-loader.gif) no-repeat center center;
 	background-size: 33px;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	@include border-radius(5px);
-	overflow: hidden;
 }
 
 // Main navigation
@@ -28,6 +22,8 @@ nav.main{
 		right: 0;
 		background: #111;
 		@include clearfix;
+		@include border-bottom-radius(5px);
+		overflow: hidden;
 		
 		li{
 			width: 33%;
