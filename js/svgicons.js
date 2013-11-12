@@ -59,8 +59,8 @@
 		this.el.appendChild( this.svg.node );
 		// state
 		this.toggled = false;
-		// click event (if mobile use touchstart)
-		this.clickevent = mobilecheck() ? 'touchstart' : 'click';
+		// click event (if mobile use touchend)
+		this.clickevent = mobilecheck() ? 'touchend' : 'click';
 		// icons configuration
 		this.config = config[ this.el.getAttribute( 'data-icon-name' ) ];
 		// reverse?
