@@ -63,27 +63,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 7, ../sass/style.scss */
-.first {
-  margin-left: 0 !important;
-}
-
-/* line 8, ../sass/style.scss */
-.last {
-  margin-right: 0 !important;
-}
-
-/* line 9, ../sass/style.scss */
-.top {
-  margin-top: 0 !important;
-}
-
-/* line 10, ../sass/style.scss */
-.bottom {
-  margin-bottom: 0 !important;
-}
-
-/* line 12, ../sass/style.scss */
+/* line 6, ../sass/style.scss */
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -92,11 +72,11 @@ body {
   background-size: 33px;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 nav.main {
   font-size: 16px;
 }
-/* line 23, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 nav.main ul {
   position: absolute;
   bottom: 0;
@@ -106,7 +86,7 @@ nav.main ul {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 31, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 nav.main ul li {
   width: 33%;
   float: left;
@@ -116,32 +96,32 @@ nav.main ul li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 38, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 nav.main ul li a {
   display: block;
   padding: 20px;
   color: #fff;
   text-decoration: none;
 }
-/* line 45, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   background: #000;
 }
-/* line 49, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 nav.main ul li a.active {
   background: #F0CA32;
   color: #222;
 }
-/* line 55, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 nav.main ul li:nth-child(2) {
   width: 34%;
 }
-/* line 59, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 nav.main ul li:first-child {
   border-left: none;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .page {
   position: absolute;
   left: 0;
@@ -167,44 +147,11 @@ nav.main ul li:first-child {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 79, ../sass/style.scss */
-.page .content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 30px 30px 80px;
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-  font-size: 16px;
-  color: #222;
-}
-/* line 91, ../sass/style.scss */
-.page .content h1 {
-  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-  font-size: 48px;
-  margin-bottom: 20px;
-  line-height: 1.2em;
-}
-/* line 98, ../sass/style.scss */
-.page .content p {
-  line-height: 1.5em;
-  margin-top: 20px;
-}
-/* line 102, ../sass/style.scss */
-.page .content p.introduction {
-  margin-top: 0;
-  font-size: 22px;
-  line-height: 1.2em;
-  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-  color: rgba(0, 0, 0, 0.5);
-}
-/* line 112, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
-  bottom: 10px;
-  left: 20px;
+  top: 20px;
+  right: 20px;
   z-index: 99;
   display: block;
   cursor: pointer;
@@ -216,21 +163,21 @@ nav.main ul li:first-child {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 124, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 127, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
 }
-/* line 131, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .page.navShown.slideIn {
   -webkit-transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
@@ -238,11 +185,45 @@ nav.main ul li:first-child {
   transform: scale(0.775) rotate(0deg) translate(150%, 45px) skew(0deg, 0deg);
 }
 
-/* line 137, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 30px 30px 80px;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  font-size: 16px;
+  color: #222;
+}
+/* line 113, ../sass/style.scss */
+.content h1 {
+  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+/* line 120, ../sass/style.scss */
+.content p {
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+/* line 124, ../sass/style.scss */
+.content p.introduction {
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 135, ../sass/style.scss */
 .tabs {
   display: none;
 }
-/* line 140, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
