@@ -49,7 +49,7 @@ nav.main{
 				
 				&.tapped,
 				&:active{
-					background: #1A84AD;
+					background: #fff;
 					color: #222;
 				}
 			}
@@ -96,10 +96,6 @@ nav.main{
 		
 		&.slideOut{
 			@include transform(0.775, 0deg, 0, -150%, 0deg, 0deg);
-		}
-		
-		&.slideIn{
-			@include transform(0.775, 0deg, 150%, 45px, 0deg, 0deg);
 		}
 	}
 }
