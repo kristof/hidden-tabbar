@@ -104,14 +104,6 @@ nav.main{
 
 // Content styling
 .content{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	padding: 30px 30px 80px;
-	-webkit-overflow-scrolling: touch;
-	overflow: auto;
 	font-size: 16px;
 	color: #222;
 	
@@ -139,6 +131,14 @@ nav.main{
 // Tab display
 .tabs{
 	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+	padding: 30px 30px 90px;
 	
 	&.active{
 		display: block;
