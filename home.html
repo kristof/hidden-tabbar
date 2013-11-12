@@ -87,8 +87,7 @@
 			// On page click go back to page
 			$('.page').on('click', function(){
 				$('.page').removeClass('navShown');
-				$('.si-icon-hamburger-cross').html('');
-				new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+				initIcon();
 				return false;
 			});
 			
