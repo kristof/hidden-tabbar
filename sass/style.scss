@@ -107,7 +107,7 @@ nav.main{
 		-webkit-transform-style: preserve-3d;
 		
 		&.rotateBack{
-			@include transform(rotateX(0) scale(0.775) translateY(45px));
+			@include transform(rotateX(0) scale(0.775) translateY(35px));
 		}
 		
 		&.slideOut{

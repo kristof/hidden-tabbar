@@ -207,11 +207,11 @@ nav.main ul li:first-child {
 }
 /* line 109, ../sass/style.scss */
 .page.navShown.rotateBack {
-  -webkit-transform: rotateX(0) scale(0.775) translateY(45px);
-  -moz-transform: rotateX(0) scale(0.775) translateY(45px);
-  -ms-transform: rotateX(0) scale(0.775) translateY(45px);
-  -o-transform: rotateX(0) scale(0.775) translateY(45px);
-  transform: rotateX(0) scale(0.775) translateY(45px);
+  -webkit-transform: rotateX(0) scale(0.775) translateY(35px);
+  -moz-transform: rotateX(0) scale(0.775) translateY(35px);
+  -ms-transform: rotateX(0) scale(0.775) translateY(35px);
+  -o-transform: rotateX(0) scale(0.775) translateY(35px);
+  transform: rotateX(0) scale(0.775) translateY(35px);
 }
 /* line 113, ../sass/style.scss */
 .page.navShown.slideOut {
