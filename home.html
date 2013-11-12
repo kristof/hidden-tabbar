@@ -1,10 +1,8 @@
 <html class="modernbrowser" lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
-	<meta name="viewport"
-		  content="width=320.1">
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+	<meta name="viewport" content="width=320.1">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	
@@ -13,10 +11,13 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
 	
+	<!-- Head scripts -->
 	<script src="js/snap.svg-min.js"></script>
+	
 </head>
 <body>
 	
+	<!-- Tabbar navigation -->
 	<nav class="main">
 		<ul>
 			<li><a class="active" data-tab="tab1" href="">Articles</a></li>
@@ -24,9 +25,15 @@
 			<li><a data-tab="tab3" href="">Settings</a></li>
 		</ul>
 	</nav>
+	<!-- / Tabbar navigation -->
 	
+	<!-- Page -->
 	<div class="page">
-		<span class="showNavigation si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>		
+		
+		<!-- Navigation button -->
+		<span class="showNavigation" data-icon-name="hamburgerCross"></span>
+		
+		<!-- Page content -->
 		<div class="content">
 			<div class="tabs tab1 active">
 				<h1>Awesome design article</h1>
@@ -54,8 +61,12 @@
 				<p>Praesent felis sapien, sollicitudin et sollicitudin sed, rutrum non neque. Pellentesque vel erat vel urna condimentum convallis. Aliquam erat volutpat. Quisque consectetur sodales ante, et fermentum diam tempus dapibus. Duis justo nisl, convallis sit amet laoreet vel, congue vitae nulla. Mauris consequat ante in libero mollis pharetra vitae hendrerit diam. Fusce dictum, leo sed placerat scelerisque, leo ipsum sodales libero, quis adipiscing sem neque vel lectus. Morbi sed sapien eget arcu fermentum mattis sed id ligula.</p>
 			</div>
 		</div>
+		<!-- / Page content -->
+		
 	</div>
+	<!-- / Page -->
 	
+	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/svgicons-config.js"></script>
 	<script src="js/svgicons.js"></script>
@@ -66,11 +77,14 @@
 			
 			var timeout;
 			
+			
+			// Toggle the tabbar navigation
 			$('.showNavigation').on('click', function(){
 				$('.page').toggleClass('navShown');
 				return false;
 			});
 			
+			// On page click go back to page
 			$('.page').on('click', function(){
 				$('.page').removeClass('navShown');
 				$('.si-icon-hamburger-cross').html('');
@@ -78,17 +92,20 @@
 				return false;
 			});
 			
+			// Navigate to other pages
 			$('nav.main a').on('click', function(){
 				var self = $(this);
 				
-				if($('.tabs.active').hasClass(self.data('tab'))){
+				// Check if we navigate to another page or a new one
+				if($('.tabs.active').hasClass(self.data('tab'))){	
 					
+					// Head back to the current page
 					$('.page').removeClass('navShown');
-					$('.si-icon-hamburger-cross').html('');
-					new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+					initIcon();
 					
 				}else{
 					
+					//Navigate to another page
 					$('.page').addClass('slideOut');
 					$('nav.main a').removeClass('active');
 					self.addClass('active');
@@ -96,8 +113,7 @@
 					timeout = setTimeout(function(){
 						$('.tabs').removeClass('active');
 						$('.tabs.' + self.data('tab')).addClass('active');
-						$('.si-icon-hamburger-cross').html('');
-						new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+						initIcon();
 					}, 300);
 					
 					timeout = setTimeout(function(){
@@ -109,11 +125,22 @@
 					}, 1000);
 				
 				}
+				
 				return false;
 			});
 			
-			// initialize all icons
-			new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+			function initIcon(){
+				$('.showNavigation').html('');
+				
+				new svgIcon(
+					document.querySelector( '.showNavigation' ), 
+					svgIconConfig, 
+					{ 	speed: 300, 
+						size : { w : 32, h : 32 }
+					} );
+			}
+			
+			initIcon();
 			
 		});
 		
