@@ -24,26 +24,35 @@ nav.main{
 		bottom: 0;
 		left: 0;
 		right: 0;
+		background: #111;
 		@include clearfix;
-		background:#111;
 		
 		li{
-			padding: 20px;
-			color: #fff;
-			border-left: 2px solid #222;
 			width: 33%;
 			float: left;
 			text-align: center;
+			border-left: 2px solid #222;
 			@include box-sizing(border-box);
 			
 			a{
-				text-decoration: none;
+				display: block;
+				padding: 20px;
 				color: #fff;
+				text-decoration: none;
+				
+				&:hover,
+				&:focus{
+					background: #000;	
+				}
+				
+				&.active{
+					background: #F0CA32;
+					color: #222;
+				}
 			}
 			
 			&:nth-child(2){
 				width: 34%;
-				color: red;
 			}
 			
 			&:first-child{
@@ -123,5 +132,13 @@ nav.main{
 		.showNavigation{
 			@include rotate(45deg);
 		}
+	}
+}
+
+.tabs{
+	display: none;
+	
+	&.active{
+		display: block;
 	}
 }
