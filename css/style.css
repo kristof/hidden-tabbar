@@ -152,8 +152,9 @@ nav.main ul li:first-child {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  -webkit-backface-visibility: hidden;
 }
-/* line 82, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
   bottom: 20px;
@@ -168,15 +169,16 @@ nav.main ul li:first-child {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  -webkit-backface-visibility: hidden;
 }
-/* line 94, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 97, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
@@ -184,7 +186,7 @@ nav.main ul li:first-child {
   transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
 }
 
-/* line 104, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .content {
   position: absolute;
   left: 0;
@@ -197,19 +199,19 @@ nav.main ul li:first-child {
   font-size: 16px;
   color: #222;
 }
-/* line 116, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .content h1 {
   font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
   font-size: 48px;
   margin-bottom: 20px;
   line-height: 1.2em;
 }
-/* line 123, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content p {
   line-height: 1.5em;
   margin-top: 20px;
 }
-/* line 127, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-size: 22px;
@@ -218,11 +220,11 @@ nav.main ul li:first-child {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 138, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .tabs {
   display: none;
 }
-/* line 141, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
