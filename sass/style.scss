@@ -110,29 +110,19 @@ nav.main{
 	}
 	
 	.showNavigation{
-		text-decoration: none;
-		color: #fff;
 		position: absolute;
-		bottom: 20px;
+		bottom: 10px;
 		left: 20px;
-		font-size: 40px;
 		z-index: 99;
 		display: block;
-		width: 40px;
-		height: 40px;
-		background: rgba(0,0,0,0.5);
-		text-align: center;
-		line-height: 0.75;
+		cursor: pointer;
+		background: rgba(0,0,0,0.75);
+		padding: 10px;
 		@include border-radius(50%);
-		@include transition(transform 0.3s);
 	}
 	
 	&.navShown{
 		@include transform(0.775, 0deg, 0, 45px, 0deg, 0deg);
-		
-		.showNavigation{
-			@include rotate(45deg);
-		}
 		
 		&.slideOut{
 			@include transform(0.775, 0deg, 0, -150%, 0deg, 0deg);

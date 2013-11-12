@@ -12,6 +12,8 @@
 	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
+	
+	<script src="js/snap.svg-min.js"></script>
 </head>
 <body>
 	
@@ -24,8 +26,7 @@
 	</nav>
 	
 	<div class="page">
-		<a href="" class="showNavigation">+</a>
-		
+		<span class="showNavigation si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>		
 		<div class="content">
 			<div class="tabs tab1 active">
 				<h1>Awesome design article</h1>
@@ -60,8 +61,8 @@
 	<script>
 		
 		$(function(){
-			var timeout;
 			
+			var timeout;
 			
 			$('.showNavigation').on('click', function(){
 				$('.page').toggleClass('navShown');
@@ -70,6 +71,8 @@
 			
 			$('.page').on('click', function(){
 				$('.page').removeClass('navShown');
+				$('.si-icon-hamburger-cross').html('');
+				new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
 				return false;
 			});
 			
@@ -79,6 +82,8 @@
 				if($('.tabs.active').hasClass(self.data('tab'))){
 					
 					$('.page').removeClass('navShown');
+					$('.si-icon-hamburger-cross').html('');
+					new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
 					
 				}else{
 					
@@ -89,6 +94,8 @@
 					timeout = setTimeout(function(){
 						$('.tabs').removeClass('active');
 						$('.tabs.' + self.data('tab')).addClass('active');
+						$('.si-icon-hamburger-cross').html('');
+						new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
 					}, 300);
 					
 					timeout = setTimeout(function(){
@@ -102,8 +109,18 @@
 				}
 				return false;
 			});
+			
 		});
 		
+	</script>
+	
+	<script src="js/svgicons-config.js"></script>
+	<script src="js/svgicons.js"></script>
+	<script>
+		(function() {
+			// initialize all
+			new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { speed: 300, size : { w : 32, h : 32 }} );
+		})();
 	</script>
 			 
 </body>
