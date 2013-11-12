@@ -66,18 +66,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 6, ../sass/style.scss */
 body {
   font: 17px/21px -apple-system-font;
-  font-weight: bold;
   color: #fff;
   background: #222222 url(../img/ajax-loader.gif) no-repeat center center;
   background-size: 33px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 16, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 nav.main {
   font-size: 16px;
 }
-/* line 19, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 nav.main ul {
   position: absolute;
   bottom: 0;
@@ -87,7 +86,7 @@ nav.main ul {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 27, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 nav.main ul li {
   width: 33%;
   float: left;
@@ -97,37 +96,37 @@ nav.main ul li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 34, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 nav.main ul li a {
   display: block;
   padding: 20px;
   color: #fff;
   text-decoration: none;
 }
-/* line 41, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   background: #000;
 }
-/* line 45, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 nav.main ul li a.active {
   background: #F0CA32;
   color: #222;
 }
-/* line 51, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 nav.main ul li a.tapped, nav.main ul li a:active {
   background: #fff;
   color: #222;
 }
-/* line 57, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 nav.main ul li:nth-child(2) {
   width: 34%;
 }
-/* line 61, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 nav.main ul li:first-child {
   border-left: none;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .page {
   position: absolute;
   left: 0;
@@ -154,7 +153,7 @@ nav.main ul li:first-child {
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
 }
-/* line 83, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
   bottom: 20px;
@@ -171,14 +170,14 @@ nav.main ul li:first-child {
   border-radius: 50%;
   -webkit-backface-visibility: hidden;
 }
-/* line 96, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
   transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
 }
-/* line 99, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
   -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
@@ -186,32 +185,31 @@ nav.main ul li:first-child {
   transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
 }
 
-/* line 106, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .content {
   font-size: 16px;
   color: #222;
 }
-/* line 110, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .content h1 {
   margin-bottom: 20px;
   line-height: 1.2em;
   font: 48px/48px -apple-system-font;
   font-weight: 100;
 }
-/* line 119, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .content p {
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin-top: 20px;
-  font: 17px/21px -apple-system-font;
 }
-/* line 124, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
-  font: 17px/21px -apple-system-font;
   font-weight: bold;
+  font: 24px/24px -apple-system-font;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -222,8 +220,9 @@ nav.main ul li:first-child {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
   padding: 30px 30px 90px;
+  font-weight: bold;
 }
-/* line 144, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
