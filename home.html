@@ -89,6 +89,9 @@
 						// Toggle the tabbar navigation
 						$('.showNavigation').on('click', function(){
 							$('.page').toggleClass('navShown');
+							timeout = setTimeout(function(){
+								$('.page').toggleClass('rotateBack');
+							}, 200);
 							return false;
 						});
 						
@@ -127,6 +130,10 @@
 								timeout = setTimeout(function(){
 									$('.page').removeClass('slideOut');
 								}, 610);
+								
+								timeout = setTimeout(function(){
+									$('.page').removeClass('rotateBack');
+								}, 900);
 								
 								timeout = setTimeout(function(){
 									$('.page').removeClass('navShown');

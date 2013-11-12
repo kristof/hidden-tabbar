@@ -1,6 +1,6 @@
 @import "compass/reset";
 @import "compass/css3";
-@import "compass/css3/transform-legacy";
+@import "compass/css3/transform";
 @import "compass/utilities/general/clearfix";
 
 html{
@@ -86,6 +86,7 @@ nav.main{
 	@include transform-origin(top, center);
 	@include border-radius(5px);
 	-webkit-backface-visibility: hidden;
+	@include transform(perspective(200px));
 	
 	.showNavigation{
 		position: absolute;
@@ -101,10 +102,16 @@ nav.main{
 	}
 	
 	&.navShown{
-		@include transform(0.775, 0deg, 0, 45px, 0deg, 0deg);
+		@include transform(rotateX(10deg) scale(0.775));
+		-webkit-transform-origin: 50% 45px;
+		-webkit-transform-style: preserve-3d;
+		
+		&.rotateBack{
+			@include transform(rotateX(0) scale(0.775) translateY(45px));
+		}
 		
 		&.slideOut{
-			@include transform(0.775, 0deg, 0, -150%, 0deg, 0deg);
+			@include transform(rotateX(0) scale(0.775) translateY(-150%));
 		}
 	}
 }
@@ -115,8 +122,6 @@ nav.main{
 	color: #222;
 	
 	h1{
-		//font-family: "Hoefler Text", Constantia, Palatino, Georgia, serif;
-		//font-size: 48px;
 		margin-bottom: 20px;
 		line-height: 1.2em;
 		font: 48px/48px -apple-system-font;

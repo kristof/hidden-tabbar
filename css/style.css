@@ -163,6 +163,7 @@ nav.main ul li:first-child {
   transition: transform 0.3s;
   -webkit-transform-origin: top center;
   -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
   -o-transform-origin: top center;
   transform-origin: top center;
   -webkit-border-radius: 5px;
@@ -171,8 +172,13 @@ nav.main ul li:first-child {
   -o-border-radius: 5px;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(200px);
+  -moz-transform: perspective(200px);
+  -ms-transform: perspective(200px);
+  -o-transform: perspective(200px);
+  transform: perspective(200px);
 }
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
   bottom: 20px;
@@ -189,40 +195,52 @@ nav.main ul li:first-child {
   border-radius: 50%;
   -webkit-backface-visibility: hidden;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .page.navShown {
-  -webkit-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
-  -moz-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
-  -o-transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
-  transform: scale(0.775) rotate(0deg) translate(0, 45px) skew(0deg, 0deg);
+  -webkit-transform: rotateX(10deg) scale(0.775);
+  -moz-transform: rotateX(10deg) scale(0.775);
+  -ms-transform: rotateX(10deg) scale(0.775);
+  -o-transform: rotateX(10deg) scale(0.775);
+  transform: rotateX(10deg) scale(0.775);
+  -webkit-transform-origin: 50% 45px;
+  -webkit-transform-style: preserve-3d;
 }
-/* line 106, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
+.page.navShown.rotateBack {
+  -webkit-transform: rotateX(0) scale(0.775) translateY(45px);
+  -moz-transform: rotateX(0) scale(0.775) translateY(45px);
+  -ms-transform: rotateX(0) scale(0.775) translateY(45px);
+  -o-transform: rotateX(0) scale(0.775) translateY(45px);
+  transform: rotateX(0) scale(0.775) translateY(45px);
+}
+/* line 113, ../sass/style.scss */
 .page.navShown.slideOut {
-  -webkit-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
-  -moz-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
-  -o-transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
-  transform: scale(0.775) rotate(0deg) translate(0, -150%) skew(0deg, 0deg);
+  -webkit-transform: rotateX(0) scale(0.775) translateY(-150%);
+  -moz-transform: rotateX(0) scale(0.775) translateY(-150%);
+  -ms-transform: rotateX(0) scale(0.775) translateY(-150%);
+  -o-transform: rotateX(0) scale(0.775) translateY(-150%);
+  transform: rotateX(0) scale(0.775) translateY(-150%);
 }
 
-/* line 113, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content {
   font-size: 16px;
   color: #222;
 }
-/* line 117, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .content h1 {
   margin-bottom: 20px;
   line-height: 1.2em;
   font: 48px/48px -apple-system-font;
   font-weight: 100;
 }
-/* line 126, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .content p {
   line-height: 1.6em;
   margin-top: 20px;
   font-weight: normal;
 }
-/* line 131, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-weight: bold;
@@ -230,7 +248,7 @@ nav.main ul li:first-child {
   line-height: 1.6em;
 }
 
-/* line 141, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -243,7 +261,7 @@ nav.main ul li:first-child {
   padding: 30px 30px 90px;
   font-weight: bold;
 }
-/* line 153, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 .tabs.active {
   display: block;
 }
