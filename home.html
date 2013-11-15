@@ -1,8 +1,7 @@
 <html class="modernbrowser" lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
-	<meta name="viewport" content="width=320.1">
+	<meta name="viewport" content="width=320.1, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,6 +70,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="js/svgicons-config.js"></script>
 	<script src="js/svgicons.js"></script>
+	<script src="js/hammer.js"></script>
 	
 	<script>
 		
@@ -83,7 +83,7 @@
 				document.querySelector('.showNavigation'), 
 				svgIconConfig, 
 				{ 	speed	: 300, 
-					size		: { w : 32, h : 32 }, 
+					size		: { w : 28, h : 28 }, 
 					onLoad	: function(){
 						
 						// Toggle the tabbar navigation
@@ -100,6 +100,29 @@
 								}, 200);
 							}
 							return false;
+						});
+						
+						// Block scrolling while pinching
+						$('.tabs').hammer({ drag_lock_to_axis: true }).on("pinch", function(event) {
+							   event.gesture.preventDefault();
+						});
+						
+						// Show navigation on pinch in
+						Hammer($('body')).on("pinchin", function(event) {
+							$('.page').addClass('navShown');
+							timeout = setTimeout(function(){
+								$('.page').addClass('rotateBack');
+							}, 200);
+							icon.toggle(true);
+						});
+						
+						// Hide navigation on pinch out
+						Hammer($('body')).on("pinchout", function(event) {
+							$('.page').removeClass('rotateBack');
+							timeout = setTimeout(function(){
+								$('.page').removeClass('navShown');
+							}, 200);
+							icon.toggle(true);
 						});
 						
 						// On page click go back to page

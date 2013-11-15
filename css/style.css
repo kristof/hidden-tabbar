@@ -181,18 +181,13 @@ nav.main ul li:first-child {
 /* line 91, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0;
+  right: 0;
   z-index: 99;
   display: block;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.75);
   padding: 10px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
   -webkit-backface-visibility: hidden;
 }
 /* line 104, ../sass/style.scss */
@@ -258,7 +253,7 @@ nav.main ul li:first-child {
   bottom: 0;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  padding: 30px 30px 90px;
+  padding: 30px 80px 90px 30px;
   font-weight: bold;
 }
 /* line 158, ../sass/style.scss */
