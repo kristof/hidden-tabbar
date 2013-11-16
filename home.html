@@ -77,8 +77,6 @@
 			
 			var timeout;		
 			
-			
-			
 			// Init the menu icon
 			var icon = new svgIcon(
 				document.querySelector('.showNavigation'), 
@@ -99,6 +97,16 @@
 								timeout = setTimeout(function(){
 									$('.page').addClass('rotateBack');
 								}, 200);
+								
+								// On page click go back to page
+								$('.page').one('click', function(){
+									$('.page').removeClass('rotateBack');
+									timeout = setTimeout(function(){
+										$('.page').removeClass('navShown');
+									}, 200);
+									icon.toggle(true);
+									return false;
+								});
 							}
 							return false;
 						});
@@ -124,13 +132,6 @@
 								$('.page').removeClass('navShown');
 							}, 200);
 							icon.toggle(true);
-						});
-						
-						// On page click go back to page
-						$('body').on('click', '.page.navShown', function(){
-							$('.page').removeClass('navShown');
-							icon.toggle(true);
-							return false;
 						});
 						
 						// Navigate to other pages
