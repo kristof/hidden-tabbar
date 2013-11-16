@@ -73,125 +73,132 @@
 	
 	<script>
 		
-		$(function(){
-			
-			var timeout;		
-			
-			// Init the menu icon
-			var icon = new svgIcon(
-				document.querySelector('.showNavigation'), 
-				svgIconConfig, 
-				{ 	speed	: 300, 
-					size		: { w : 18, h : 18 }, 
-					onLoad	: function(){
-						
-						// Toggle the tabbar navigation
-						$('.showNavigation').on('click', function(){
-							if($('.page').hasClass('navShown')){
-								$('.page').removeClass('rotateBack');
-								timeout = setTimeout(function(){
-									$('.page').removeClass('navShown');
-								}, 200);
-							}else{
-								$('.page').addClass('navShown');
-								timeout = setTimeout(function(){
-									$('.page').addClass('rotateBack');
-								}, 200);
+		var navigation = {
+			init: function()
+			{
+				var timeout;	
+					
+				// Init the menu icon
+				var icon = new svgIcon(
+					document.querySelector('.showNavigation'), 
+					svgIconConfig, 
+					{ 	speed	: 300, 
+						size		: { w : 18, h : 18 }, 
+						onLoad	: function(){
+							
+							// Toggle the tabbar navigation
+							$('.showNavigation').on('click', function(){
+								if($('.page').hasClass('navShown')){
+									navigation.popPage();
+								}else{
+									navigation.pushPage();
+									
+									// On page click go back to page
+									$('.page').one('click', function(){
+										navigation.popPage();
+										icon.toggle(true);
+										return false;
+									});
+								}
+								return false;
+							});
+							
+							// Block scrolling while pinching
+							$('.tabs').hammer({ drag_lock_to_axis: true }).on("pinch", function(event) {
+								   event.gesture.preventDefault();
+							});
+							
+							// Show navigation on pinch in
+							Hammer($('body')).on("pinchin", function(event) {
+								navigation.pushPage();
+								icon.toggle(true);
+							});
+							
+							// Hide navigation on pinch out
+							Hammer($('body')).on("pinchout", function(event) {
+								navigation.popPage();
+								icon.toggle(true);
+							});
+							
+							// Show navigation on pinch in
+							Hammer($('body')).on("pinchin", function(event) {
+								navigation.pushPage();
+								icon.toggle(true);
+							});
+							
+							// Navigate to other pages
+							$('nav.main a').on('click', function(){
 								
-								// On page click go back to page
-								$('.page').one('click', function(){
-									$('.page').removeClass('rotateBack');
+								var self = $(this);
+								
+								// Check if we navigate to another page or a new one
+								if($('.tabs.active').hasClass(self.data('tab'))){	
+									
+									// Head back to the current page
+									navigation.popPage();
+									icon.toggle(true);
+									
+								}else{
+									
+									//Navigate to another page
+									$('.page').addClass('slideOut');
+									$('nav.main a').removeClass('active');
+									self.addClass('active');
+									
+									timeout = setTimeout(function(){
+										$('.tabs').removeClass('active');
+										$('.tabs.' + self.data('tab')).addClass('active');
+										icon.toggle(true);
+									}, 300);
+									
+									timeout = setTimeout(function(){
+										$('.page').removeClass('slideOut');
+									}, 610);
+									
+									timeout = setTimeout(function(){
+										$('.page').removeClass('rotateBack');
+									}, 900);
+									
 									timeout = setTimeout(function(){
 										$('.page').removeClass('navShown');
-									}, 200);
-									icon.toggle(true);
-									return false;
-								});
-							}
-							return false;
-						});
-						
-						// Block scrolling while pinching
-						$('.tabs').hammer({ drag_lock_to_axis: true }).on("pinch", function(event) {
-							   event.gesture.preventDefault();
-						});
-						
-						// Show navigation on pinch in
-						Hammer($('body')).on("pinchin", function(event) {
-							$('.page').addClass('navShown');
-							timeout = setTimeout(function(){
-								$('.page').addClass('rotateBack');
-							}, 200);
-							icon.toggle(true);
-						});
-						
-						// Hide navigation on pinch out
-						Hammer($('body')).on("pinchout", function(event) {
-							$('.page').removeClass('rotateBack');
-							timeout = setTimeout(function(){
-								$('.page').removeClass('navShown');
-							}, 200);
-							icon.toggle(true);
-						});
-						
-						// Navigate to other pages
-						$('nav.main a').on('click', function(){
+									}, 1000);
+								
+								}
+								
+								return false;
+							});
 							
-							var self = $(this);
-							
-							// Check if we navigate to another page or a new one
-							if($('.tabs.active').hasClass(self.data('tab'))){	
-								
-								// Head back to the current page
-								$('.page').removeClass('rotateBack');
-								timeout = setTimeout(function(){
-									$('.page').removeClass('navShown');
-								}, 200);
-								icon.toggle(true);
-								
-							}else{
-								
-								//Navigate to another page
-								$('.page').addClass('slideOut');
-								$('nav.main a').removeClass('active');
-								self.addClass('active');
-								
-								timeout = setTimeout(function(){
-									$('.tabs').removeClass('active');
-									$('.tabs.' + self.data('tab')).addClass('active');
-									icon.toggle(true);
-								}, 300);
-								
-								timeout = setTimeout(function(){
-									$('.page').removeClass('slideOut');
-								}, 610);
-								
-								timeout = setTimeout(function(){
-									$('.page').removeClass('rotateBack');
-								}, 900);
-								
-								timeout = setTimeout(function(){
-									$('.page').removeClass('navShown');
-								}, 1000);
-							
-							}
-							
-							return false;
-						});
-						
+						}
 					}
-				}
-			);
+				);
+					
+				// Add tap highlights
+				$('a').on('touchstart', function(e){
+					$(this).addClass('tapped');
+				});
 				
-			// Add tap highlights
-			$('a').on('touchstart', function(e){
-				$(this).addClass('tapped');
-			});
+				$('a').on('touchend', function(e){
+					$(this).removeClass('tapped');
+				});
+				
+			},
 			
-			$('a').on('touchend', function(e){
-				$(this).removeClass('tapped');
-			});
-		});
+			pushPage: function(){
+				$('.page').addClass('navShown');
+				timeout = setTimeout(function(){
+					$('.page').addClass('rotateBack');
+				}, 200);
+			}, 
+			
+			popPage: function(){
+				$('.page').removeClass('rotateBack').off('click');
+				timeout = setTimeout(function(){
+					$('.page').removeClass('navShown');
+				}, 200);
+			}, 
+		};
+		
+		$(navigation.init);
 		
 	</script>
 			 
