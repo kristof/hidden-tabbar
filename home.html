@@ -73,10 +73,12 @@
 	
 	<script>
 		
+		var timeout;	
+		
 		var navigation = {
+			
 			init: function()
 			{
-				var timeout;	
 					
 				// Init the menu icon
 				var icon = new svgIcon(
@@ -141,27 +143,7 @@
 								}else{
 									
 									//Navigate to another page
-									$('.page').addClass('slideOut');
-									$('nav.main a').removeClass('active');
-									self.addClass('active');
-									
-									timeout = setTimeout(function(){
-										$('.tabs').removeClass('active');
-										$('.tabs.' + self.data('tab')).addClass('active');
-										icon.toggle(true);
-									}, 300);
-									
-									timeout = setTimeout(function(){
-										$('.page').removeClass('slideOut');
-									}, 610);
-									
-									timeout = setTimeout(function(){
-										$('.page').removeClass('rotateBack');
-									}, 900);
-									
-									timeout = setTimeout(function(){
-										$('.page').removeClass('navShown');
-									}, 1000);
+									navigation.navigate(self, icon);
 								
 								}
 								
@@ -195,7 +177,31 @@
 				timeout = setTimeout(function(){
 					$('.page').removeClass('navShown');
 				}, 200);
-			}, 
+			},
+			
+			navigate: function(self, icon){
+				$('.page').addClass('slideOut');
+				$('nav.main a').removeClass('active');
+				self.addClass('active');
+				
+				timeout = setTimeout(function(){
+					$('.tabs').removeClass('active');
+					$('.tabs.' + self.data('tab')).addClass('active');
+					icon.toggle(true);
+				}, 300);
+				
+				timeout = setTimeout(function(){
+					$('.page').removeClass('slideOut');
+				}, 610);
+				
+				timeout = setTimeout(function(){
+					$('.page').removeClass('rotateBack');
+				}, 900);
+				
+				timeout = setTimeout(function(){
+					$('.page').removeClass('navShown');
+				}, 1000);
+			}
 		};
 		
 		$(navigation.init);
