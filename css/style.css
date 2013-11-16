@@ -181,16 +181,22 @@ nav.main ul li:first-child {
 /* line 91, ../sass/style.scss */
 .page .showNavigation {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   z-index: 99;
   display: block;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.75);
   padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
   -webkit-backface-visibility: hidden;
+  opacity: .3;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .page.navShown {
   -webkit-transform: rotateX(20deg) scale(0.775);
   -moz-transform: rotateX(20deg) scale(0.775);
@@ -200,7 +206,7 @@ nav.main ul li:first-child {
   -webkit-transform-origin: 50% 0;
   -webkit-transform-style: preserve-3d;
 }
-/* line 109, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .page.navShown.rotateBack {
   -webkit-transform: rotateX(0) scale(0.775) translateY(35px);
   -moz-transform: rotateX(0) scale(0.775) translateY(35px);
@@ -208,7 +214,7 @@ nav.main ul li:first-child {
   -o-transform: rotateX(0) scale(0.775) translateY(35px);
   transform: rotateX(0) scale(0.775) translateY(35px);
 }
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .page.navShown.slideOut {
   -webkit-transform: rotateX(0) scale(0.775) translateY(-150%);
   -moz-transform: rotateX(0) scale(0.775) translateY(-150%);
@@ -217,25 +223,25 @@ nav.main ul li:first-child {
   transform: rotateX(0) scale(0.775) translateY(-150%);
 }
 
-/* line 120, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .content {
   font-size: 16px;
   color: #222;
 }
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content h1 {
   margin-bottom: 20px;
   line-height: 1.2em;
   font: 48px/48px -apple-system-font;
   font-weight: 100;
 }
-/* line 131, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .content p {
   line-height: 1.6em;
   margin-top: 20px;
   font-weight: normal;
 }
-/* line 136, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .content p.introduction {
   margin-top: 0;
   font-weight: bold;
@@ -243,7 +249,7 @@ nav.main ul li:first-child {
   line-height: 1.6em;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .tabs {
   display: none;
   position: absolute;
@@ -253,10 +259,10 @@ nav.main ul li:first-child {
   bottom: 0;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  padding: 30px 55px 90px 30px;
+  padding: 30px 30px 90px;
   font-weight: bold;
 }
-/* line 158, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .tabs.active {
   display: block;
 }

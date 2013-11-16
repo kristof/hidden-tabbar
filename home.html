@@ -60,7 +60,7 @@
 		<!-- / Page content -->
 		
 		<!-- Navigation button -->
-		<span class="showNavigation" data-icon-name="hamburgerCross"></span>
+		<span class="showNavigation si-icon-reverse" data-icon-name="maximizeRotate"></span>
 		
 	</div>
 	<!-- / Page -->
@@ -77,12 +77,14 @@
 			
 			var timeout;		
 			
+			
+			
 			// Init the menu icon
 			var icon = new svgIcon(
 				document.querySelector('.showNavigation'), 
 				svgIconConfig, 
 				{ 	speed	: 300, 
-					size		: { w : 28, h : 28 }, 
+					size		: { w : 18, h : 18 }, 
 					onLoad	: function(){
 						
 						// Toggle the tabbar navigation

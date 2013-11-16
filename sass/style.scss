@@ -90,15 +90,16 @@ nav.main{
 	
 	.showNavigation{
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		bottom: 10px;
+		right: 10px;
 		z-index: 99;
 		display: block;
 		cursor: pointer;
 		background: rgba(0,0,0,0.75);
 		padding: 10px;
-		//@include border-radius(50%);
+		@include border-radius(50%);
 		-webkit-backface-visibility: hidden;
+		opacity: .3;
 	}
 	
 	&.navShown{
@@ -152,7 +153,7 @@ nav.main{
 	bottom: 0;
 	-webkit-overflow-scrolling: touch;
 	overflow: auto;
-	padding: 30px 55px 90px 30px;
+	padding: 30px 30px 90px;
 	font-weight: bold;
 	
 	&.active{
