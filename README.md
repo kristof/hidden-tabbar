@@ -1,9 +1,9 @@
-hidden-tabbar
+Hidden tabbar
 =============
 
 When working on a project I was having a problem with the native tab bar controller in IOS. They have been around since the beginning of the platform and are a great way to easily navigate without actually leaving the current view, which is awesome. 
 
-{<1>}![Tab bar controller](http://cl.ly/image/2o0U0l3p1Q11/tabbar.png)
+![Tab bar controller](http://cl.ly/image/2o0U0l3p1Q11/tabbar.png)
 
 But I had some issues:
 
